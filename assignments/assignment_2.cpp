@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 
-
+// time complixty O(n) and space O(1)
 int stockPrediction(std::vector<int>& prices)
 {
  int buy = prices[0];
@@ -35,4 +35,3 @@ int main() {
     return 0;
 }
 
-// time complixty O(n) and space O(1)
