@@ -34,3 +34,5 @@ int main() {
 
     return 0;
 }
+
+// time complixty O(n) and space O(1)
