@@ -4,23 +4,16 @@
 using namespace std;
 
 // Time - O(logn) | Space - O(1) 
-int findSmallest(vector<int>& inp)
+int findSmallest(vector<int>& nums)
 {
-    int left = 0, right = inp.size() - 1;
-    int small;
-    while(left <= right)
-    {
-        int mid = left + (right - left)/2;
-        if(inp[left] < inp[right])
-        {
-            small = inp[left];
-            right = mid - 1;
-        }else {
-            small = inp[right];
-            left = mid + 1;
-        }
-    }
-    return small;
+    int start = 0,end = nums.size()-1; 
+    while(start<end)
+    { 
+        int mid = (start + end)/2;
+        if(nums[mid]>nums[end]) start = mid+1; 
+        else end = mid; 
+    } 
+    return nums[start];
 }
 
 int main() {
