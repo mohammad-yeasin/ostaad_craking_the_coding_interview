@@ -23,7 +23,12 @@ void printPreOrder(TreeNode* root)
     printPreOrder(root->right);
 }
 
-// Time complixity O(h), Space complixity O()
+/*
+    Average Case Time Complexity: O(h)
+    Worst Case Time Complexity (skewed tree): O(n)
+    Space Complexity (average case): O(h)
+    Space Complexity (worst case, skewed tree): O(n)
+*/
 TreeNode* searchInBST(TreeNode* root, int inp)
 {
     // base case
